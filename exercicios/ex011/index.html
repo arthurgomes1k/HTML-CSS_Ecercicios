@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <p><a href="page02.html">Proxima página</a></p>
+    <picture>
+        <source media="(max-width: 725px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1024px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p> <!-- MP3 WAV  OGG -->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/top-gear.mp3" type="audio/mpeg">
+        <source src="midia/top-gear.ogg" type="audio/ogg">
+        <source src="midia/top-gear.wav" type="audio/wav">
+        <p>Infelismente seu navegador não consegue repoduzir áudio. <a href="midia/top-gear.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+
+</body>
+</html>
