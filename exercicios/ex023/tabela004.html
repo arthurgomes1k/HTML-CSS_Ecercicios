@@ -13,6 +13,11 @@
             border-collapse: collapse;
             width: 600px;
         }
+        
+        caption {
+            font-weight: bold;
+            padding: 5px;
+        }
 
         th, td {
             border: 1px solid black;
@@ -31,54 +36,62 @@
 <body>
     <h1>Exercício de Tabelas</h1>
     <table>
+        <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
-                <th>Grupo</th>
-                <th colspan="2">Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
             </tr>
         </thead>
         <tbody>
-            <caption>Filmes Favoritos</caption>
             <tr>
-                <th rowspan="3" scope="col">Mulheres</th>
-                <td colspan="2">Ana Maria Santos</td>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
                 <td>Vingadores</td>
             </tr>
             <tr>
-                <td colspan="2">Beatriz Souza</td>
+                <td>Beatriz Souza</td>
                 <td>Hulk</td>
                 <td>Inception</td>
                 <td>Batman</td>
             </tr>
             <tr>
-                <td colspan="2">Cláudia Melo</td>
+                <td>Cláudia Melo</td>
                 <td>Oblivion</td>
                 <td>Matrix</td>
                 <td>Big hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
-                <td colspan="2">Bruno Mendonça</td>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>
                 <td>Gladiador</td>
             </tr>
             <tr>
-                <td colspan="2">Daniel Lourenço</td>
+                <td>Daniel Lourenço</td>
                 <td>Wall-E</td>
                 <td>Oldboy</td>
                 <td>Dangal</td>
             </tr>
             <tr>
-                <td colspan="2">Fabiano Mota</td>
+                <td>Fabiano Mota</td>
                 <td>Star Wars 5</td>
                 <td>Taxi Driver</td>
                 <td>Toy Story</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2" scope="row">Melhor</th>
+                <td>Wall-E</td>
+                <td>Matrix</td>
+                <td>Toy Story</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
